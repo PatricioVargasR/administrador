@@ -132,7 +132,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Estado</label> </br>
+                                <label for="">Ocultar</label> </br>
                                 <input type="checkbox" name="status"  <?= $post_row[0]['status'] == '1' ? 'checked' : '' ?>   class="form-check-input">
                             </div>
 

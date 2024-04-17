@@ -38,14 +38,25 @@
 
         $obra_asociada = $_POST['obra_asociada'];
         $estado = $_POST['status'] == true ? '1' : '0';
-        $texto_pantalla = preg_split('/[\s,]+/', $_POST['texto_pantalla']);
+        $idiomas = $_POST['idioma'];
+        $textos = $_POST['texto'];
+
+        $idiomaTextoArray = [];
+
+        if(count($idiomas) == count($textos)){
+
+            for ($i = 0; $i < count($idiomas); $i++){
+                $idiomaTextoArray[$idiomas[$i]] = $textos[$i];
+            }
+
+        }
 
         $endpoint_insertar_dispositivo = "https://apiadministrador-757cf479b30b.herokuapp.com/actualizar_dispositivo/$dispositivo_id";
 
         $data = array(
             'obra_asociada' => $obra_asociada,
             'estado' => $estado,
-            'texto_pantalla' => $texto_pantalla
+            'texto_pantalla' => $idiomaTextoArray
         );
 
         $ch = curl_init($endpoint_insertar_dispositivo);
@@ -74,14 +85,25 @@
 
         $obra_asociada = $_POST['obra_asociada'];
         $estado = $_POST['status'] == true ? '1' : '0';
-        $texto_pantalla = preg_split('/[\s,]+/', $_POST['texto_pantalla']);
+        $idiomas = $_POST['idioma'];
+        $textos = $_POST['texto'];
+
+        $idiomaTextoArray = [];
+
+        if(count($idiomas) == count($textos)){
+
+            for ($i = 0; $i < count($idiomas); $i++){
+                $idiomaTextoArray[$idiomas[$i]] = $textos[$i];
+            }
+
+        }
 
         $endpoint_insertar_dispositivo = "https://apiadministrador-757cf479b30b.herokuapp.com/agregar_dispositivo";
 
         $data = array(
             'obra_asociada' => $obra_asociada,
             'estado' => $estado,
-            'texto_pantalla' => $texto_pantalla
+            'texto_pantalla' => $idiomaTextoArray
         );
 
         $ch = curl_init($endpoint_insertar_dispositivo);
