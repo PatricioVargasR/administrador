@@ -71,11 +71,11 @@
 
         if($response){
             $_SESSION['message'] = "Se ha actualizado con éxito";
-            header('Location: iot-edit.php?_id='.$dispositivo_id);
+            header('Location: iot-view.php');
             exit(0);
         } else {
             $_SESSION['message'] = "Ocurrió algún error";
-            header('Location: iot-add.php?_id='.$dispositivo_id);
+            header('Location: iot-edit.php?_id='.$dispositivo_id);
             exit(0);
         }
 
