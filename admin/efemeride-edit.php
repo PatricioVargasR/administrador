@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Estado</label> </br>
+                                <label for="">Desactivar</label> </br>
                                 <input type="checkbox" name="status"  <?= $efemeride_row['status'] == '1' ? 'checked' : '' ?>   class="form-check-input">
                             </div>
 

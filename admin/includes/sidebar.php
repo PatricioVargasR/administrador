@@ -28,7 +28,7 @@
                 <?php if($_SESSION['auth_role'] == '2'): ?>
                 <a class="nav-link  <?= $page == 'view-visitas.php' ? 'active':''?> " href="view-visitas.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                    Administrar Visitas
+                    Administrar correos
                 </a>
                 <?php endif; ?>
 

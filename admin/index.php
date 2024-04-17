@@ -12,6 +12,7 @@
     </ol>
     <?php include('message.php'); ?>
     <div class="row">
+        <?php if($_SESSION['auth_role'] == '1'): ?>
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">
@@ -147,7 +148,7 @@
 
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="post-view.php">Ver Detalles</a>
+                    <a class="small text-white stretched-link" href="view-curiosity.php">Ver Detalles</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
@@ -182,7 +183,7 @@
 
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="post-view.php">Ver Detalles</a>
+                    <a class="small text-white stretched-link" href="artwork-view.php">Ver Detalles</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
@@ -217,20 +218,20 @@
 
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="post-view.php">Ver Detalles</a>
+                    <a class="small text-white stretched-link" href="iot-view.php">Ver Detalles</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <?php if($_SESSION['auth_role'] == '2'): ?>
         <div class="col-xl-3 col-md-6">
             <div class="card bg-success text-white mb-4">
                 <div class="card-body">
-                    Total de curiosidades
+                    Total de usuarios
                     <?php
 
-
-                        $endpoint = "https://apiadministrador-757cf479b30b.herokuapp.com/curiosidades";
+                        $endpoint = "https://apisuperadministrador-5b08c9c6f028.herokuapp.com/usuarios";
 
                         $ch = curl_init($endpoint);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -260,10 +261,10 @@
         <div class="col-xl-3 col-md-6">
             <div class="card bg-danger text-white mb-4">
                 <div class="card-body">
-                    Total de imagenes
+                    Total de usuarios suspendidos
                     <?php
 
-                        $endpoint = "https://apiadministrador-757cf479b30b.herokuapp.com/imagenes";
+                        $endpoint = "https://apisuperadministrador-5b08c9c6f028.herokuapp.com/usuarios_suspendidos";
 
                         $ch = curl_init($endpoint);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -288,6 +289,76 @@
 
                 <div class="card-footer d-flex align-items-center justify-content-between">
                     <a class="small text-white stretched-link" href="view-block.php">Ver Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-secondary text-white mb-4">
+                <div class="card-body">
+                    Total de usuarios correos enviados
+                    <?php
+
+                        $endpoint = "https://apisuperadministrador-5b08c9c6f028.herokuapp.com/emails_enviados";
+
+                        $ch = curl_init($endpoint);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                        $response = json_decode(curl_exec($ch));
+
+                        curl_close($ch);
+
+
+                        if($block_total = count($response)){
+
+                            echo '<h4 class="mb-0"> '.$block_total.' </h4>';
+
+                        } else {
+
+                            echo '<h4 class="mb-0"> 0 </h4>';
+
+                        }
+
+                    ?>
+                </div>
+
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="view-email.php">Ver Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">
+                    Total de correos suscritos
+                    <?php
+
+                        $endpoint = "https://apisuperadministrador-5b08c9c6f028.herokuapp.com/emails";
+
+                        $ch = curl_init($endpoint);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                        $response = json_decode(curl_exec($ch));
+
+                        curl_close($ch);
+
+
+                        if($block_total = count($response)){
+
+                            echo '<h4 class="mb-0"> '.$block_total.' </h4>';
+
+                        } else {
+
+                            echo '<h4 class="mb-0"> 0 </h4>';
+
+                        }
+
+                    ?>
+                </div>
+
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="view-visitas.php">Ver Detalles</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>

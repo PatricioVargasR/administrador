@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL) </label>
+                                <label for=""> Identificador en la URL </label>
                                 <input type="text" name="slug" class="form-control" required>
                             </div>
 
@@ -80,17 +80,17 @@
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Título resumen</label>
                                 <input type="text" name="meta_title" class="form-control" required>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Descripción resumen</label>
                                 <textarea name="meta_description" class="form-control" rows="4" required></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Palabras Clave</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4" required></textarea>
                             </div>
 

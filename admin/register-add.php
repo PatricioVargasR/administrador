@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Estado</label>
+                                <label for="">Desactivar</label>
                                 <!-- <input type="checkbox" name="status" width="70px" height="70px" /> -->
                                 <input type="checkbox" name="status" class="form-check-input">
                             </div>

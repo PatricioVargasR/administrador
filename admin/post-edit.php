@@ -101,7 +101,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL) </label>
+                                <label for="">Identificador en la URL </label>
                                 <input type="text" name="slug" value="<?= $post_row[0]['slug']; ?>" class="form-control" required>
                             </div>
 
@@ -111,17 +111,17 @@
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Título resumen</label>
                                 <input type="text" name="meta_title" value="<?= $post_row[0]['meta_title']; ?>" class="form-control" required>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Descripción resumen</label>
                                 <textarea name="meta_description" class="form-control" rows="4" required><?= $post_row[0]['meta_description']; ?></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Palabras clave</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4"><?= implode(', ', $post_row[0]['meta_keyword']); ?></textarea>
                             </div>
 

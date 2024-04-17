@@ -13,8 +13,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4> Ver Categoria
-                        <a href="iot-add.php" class="btn btn-primary float-end">Agregar Categoia</a>
+                    <h4> Ver dispositivos
+                        <a href="iot-add.php" class="btn btn-primary float-end">Agregar dispositivos</a>
                     </h4>
                 </div>
                 <div class="card-body">

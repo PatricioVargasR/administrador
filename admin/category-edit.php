@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Slug (URL) </label>
+                                <label for="">Identificador en la URL </label>
                                 <input type="text" name="slug" value="<?= $category['slug']; ?>" class="form-control" required>
                             </div>
 
@@ -60,28 +60,28 @@
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <label for="">Meta Title</label>
+                                <label for="">Titulo resumen</label>
                                 <input type="text" name="meta_title" value="<?= $category['meta_title']; ?>" class="form-control" >
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Description</label>
+                                <label for="">Descripción resumen</label>
                                 <textarea name="meta_description" class="form-control" rows="4"><?= $category['meta_description']; ?></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Meta Keyword</label>
+                                <label for="">Palabras clave</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4"><?= implode(', ', $category['meta_keywords']); ?></textarea>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Navbar Status</label> <br/>
+                                <label for="">Desactivar en la barra de navegación</label> <br/>
                                 <!-- <input type="checkbox" name="status" width="70px" height="70px" /> -->
                                 <input type="checkbox" name="navbar_status" <?= $category['navbar_status'] == '1' ? 'checked' : '' ?> class="form-check-input">
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="">Estado</label> </br>
+                                <label for="">Desactivar</label> </br>
                                 <!-- <input type="checkbox" name="status" width="70px" height="70px" /> -->
                                 <input type="checkbox" name="status"  <?= $category['status'] == '1' ? 'checked' : '' ?>  class="form-check-input">
                             </div>
