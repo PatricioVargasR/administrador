@@ -19,18 +19,17 @@
     include('includes/navbar.php');
 ?>
 
-
 <div class="py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5"> 
+            <div class="col-md-5">
 
                 <?php include('message.php'); ?>
 
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>Register</h4>
+                        <h4>Registrate</h4>
                     </div>
                     <div class="card-body">
 
@@ -42,7 +41,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="">Apellidos</label>
-                            <input type="text"  name="lname" placeholder="Ingresa tu segundo nombre" class="form-control" >
+                            <input type="text"  name="lname" placeholder="Ingresa tu segundo nombre" class="form-control"required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="">Correo Electronico</label>
@@ -50,19 +49,22 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="">Contraseña</label>
-                            <input type="password" name="password" id="password"placeholder="Ingresa tu contraseña" class="form-control" required>
+                            <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="form-control" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="">Confirma tu contraseña</label>
                             <input type="password" name="cpassword" id="cpassword"placeholder="Confirma tu contraseña" class="form-control" required>
                         </div>
                         <div class="form-group mb-3">
-                                <button class="btn btn-danger" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
-                                <button class="btn btn-danger" type="button" onclick="mostrarContrasena2()">Mostrar confirmar</button>
+                                <button class="btn btn-secondary" type="button" onclick="mostrarContraseña()">Mostrar Contraseña</button>
                                 <hr>
-                            <button type="submit" name="register_btn" class="btn btn-primary">Enviar</button>
+                        <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center">
+
+                            <button type="submit" name="register_btn" class="btn btn-danger">Enviar</button>
+                            <a href="index.php" class="btn btn-primary">Regresar</a>
                         </div>
-                        
+                        </div>
+
                     </form>
 
                     </div>
@@ -74,23 +76,17 @@
 </div>
 
 <script>
-        function mostrarContrasena(){
-            var tipo = document.getElementById("password");
-            if(tipo.type == "password"){
-                tipo.type = "text";
-            }else{
-                tipo.type = "password";
-            }
-        }
+function mostrarContraseña() {
 
-        function mostrarContrasena2(){
-            var tipo = document.getElementById("cpassword");
-            if(tipo.type == "password"){
-                tipo.type = "text";
-            }else{
-                tipo.type = "password";
-            }
-        }
+    var tipo = document.getElementById("password");
+    var tipo2 = document.getElementById('cpassword');
+
+    var nuevoTipo = (tipo.type === "password") ? "text" : "password";
+
+    tipo.type = nuevoTipo;
+    tipo2.type = nuevoTipo;
+}
+
 
 </script>
 

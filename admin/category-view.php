@@ -59,7 +59,7 @@
                                                     <td>
                                                         <form action="code.php" method="POST">
 
-                                                            <button type="submit" name="category_delete" value="<?=$item['_id'];?>" onclick='return confirmacion()' class="btn btn-danger">Eliminar</button>
+                                                            <button type="submit" name="category_delete" value="<?=$item['_id'];?>" onclick='return confirmar()' class="btn btn-danger">Eliminar</button>
 
                                                         </form>
                                                     </td>
@@ -88,6 +88,11 @@
         </div>
     </div>
 </div>
+<script>
+    function confirmar(){
+        return confirm("Desea eliminar la categoría?")
+    }
+</script>
 
 
 <?php

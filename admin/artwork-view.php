@@ -58,7 +58,7 @@
                                                 <td>
 
                                                     <form action="code.php" method="POST">
-                                                        <button type="submit" name="artwork_delete" value="<?=$artworks['_id'];?>" class="btn btn-danger">Eliminar</button>
+                                                        <button type="submit" name="artwork_delete" value="<?=$artworks['_id'];?>" onclick="return confirmacion()" class="btn btn-danger">Eliminar</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -86,6 +86,14 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    function confirmacion(){
+        return confirm("Realmetne desea borrar el registro?")
+    }
+
+</script>
 
 
 <?php

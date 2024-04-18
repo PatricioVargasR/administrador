@@ -32,25 +32,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="caja derecha">
-            <h2>¿Recibir nuestros avisos?</h2>
-            <div class="contenido">
-                <form action="procesar.php" method="POST">
-                    <div class="email">
-                        <div class="texto">Email</div>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    <!-- <div class="msg">
-                        <div class="texto">Mensaje</div>
-                        <textarea cols="25" rows="2" required></textarea>
-                    </div> -->
-
-                    <button type="submit" name="enviar" class="btn btn-primary">Enviar Correo</button>
-
-                </form>
-            </div>
-        </div>
     </div>
 
     <div class="boton">

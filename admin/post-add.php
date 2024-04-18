@@ -13,7 +13,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4> Agregar Posts
+                    <h4> Agregar publicación
                         <a href="post-view.php" class="btn btn-danger float-end">Regresar</a>
                     </h4>
                 </div>
@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <button type="submit" name="post_add"class="btn btn-primary">Guardar Post</button>
+                                <button type="submit" name="post_add"class="btn btn-primary">Guardar publicación</button>
                             </div>
                         </div>
                     </form>

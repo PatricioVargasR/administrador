@@ -251,7 +251,8 @@
         $status = $_POST['status'] == true ? '1' : '0';
 
         // URL de destino con parámetros en la URL
-        $url = "https://apiadministrador-757cf479b30b.herokuapp.com/crear_imagenes?nombre=$name&estado=$status";
+        //$url = "https://apiadministrador-757cf479b30b.herokuapp.com/crear_imagenes?nombre=$name&estado=$status";
+        $url = "https://apiadministrador-757cf479b30b.herokuapp.com/crear_imagenes". "?nombre=" . urlencode($name) . "&estado=" . urlencode($status);
 
         // Configuración de la solicitud cURL
         $curl = curl_init($url);
@@ -664,7 +665,6 @@
         // Ejecutar la solicitud y obtener la respuesta
         $response = curl_exec($curl);
 
-        // Cerrar la conexión cURL
         curl_close($curl);
 
         if($response){
@@ -676,7 +676,7 @@
         } else {
 
             $_SESSION['message'] = "Ocurrió algún error";
-            header('Location: artwork-add.php');
+            header('Location: post-add.php');
             exit(0);
 
         }

@@ -13,7 +13,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4> Ver Post
+                    <h4> Ver publicaciones
                         <a href="post-add.php" class="btn btn-primary float-end">Nueva Publicación</a>
                     </h4>
 
@@ -88,7 +88,7 @@
                                                 <td>
 
                                                     <form action="code.php" method="POST">
-                                                        <button type="submit" name="post_delete_btn" value="<?=$post['_id'];?>" class="btn btn-danger">Eliminar</button>
+                                                        <button type="submit" name="post_delete_btn" value="<?=$post['_id'];?>" onclick="return confirmacion()" class="btn btn-danger">Eliminar</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -116,6 +116,12 @@
     </div>
 </div>
 
+<script>
+
+    function confirmacion(){
+        return confirm("Realmente desea borrar la publicación?")
+    }
+</script>
 
 <?php
 

@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4> Ver efemeride
-                        <a href="efemeride-add.php" class="btn btn-primary float-end">Agregar </a>
+                        <!-- <a href="efemeride-add.php" class="btn btn-primary float-end">Agregar </a> -->
                     </h4>
 
                 </div>
@@ -67,7 +67,7 @@
                                                 <td>
 
                                                     <form action="code.php" method="POST">
-                                                        <button type="submit" name="efemeride_delete_btn" value="<?=$efemerides['_id'];?>" class="btn btn-danger">Eliminar</button>
+                                                        <button type="submit" name="efemeride_delete_btn" value="<?=$efemerides['_id'];?>" onclick="return confirmacion()" class="btn btn-danger">Eliminar</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -95,6 +95,14 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    function confirmacion(){
+        return confirm("Realmente desea borrar el registro?")
+    }
+
+</script>
 
 
 <?php

@@ -35,25 +35,29 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>Login</h4>
+                        <h4>Inicio de sesión</h4>
                     </div>
                     <div class="card-body">
                         <form action="logincode.php" method="POST">
                             <div class="form-group mb-3">
                                 <label for="">Correo Electronico</label>
-                                <input type="email" name="email" placeholder="Enter Email Address" class="form-control" required>
+                                <input type="email" name="email" placeholder="Ingresa tu correo electronico" class="form-control" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Contraseña</label>
-                                <input type="password" name="password" id="password" placeholder="Enter Email Address" class="form-control" required>
+                                <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="form-control" required>
 
                             </div>
                             <div class="form-group mb-3">
                                 <button class="btn btn-danger" type="button" onclick="mostrarContrasena()">Mostrar Contraseña</button>
 
                                 <hr>
-                                <center><button type="submit" name="login_btn" class="btn btn-primary">Iniciar Sesión</button></center>
+                                <div style="display: flex; flex-direction: row; justify-content: space-around; align-items:center">
+                                    <button type="submit" name="login_btn" class="btn btn-primary">Iniciar Sesión</button>
+                                    <a href="register.php" class="btn btn-secondary">Registrarse</a>
+                                </div>
                             </div>
+
 
                         </form>
                     </div>

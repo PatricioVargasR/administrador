@@ -13,7 +13,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4> Modificar Posts
+                    <h4> Modificar publicación
                         <a href="post-view.php" class="btn btn-danger float-end">Regresar</a>
                     </h4>
                 </div>

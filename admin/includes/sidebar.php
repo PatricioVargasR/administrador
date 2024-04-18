@@ -54,8 +54,8 @@
                 </a>
                 <div class="collapse <?= $page == 'post-add.php' || $page == 'post-view.php' || $page == 'post-edit.php' ? 'show':''?>" id="collapsePosts" aria-labelledby="Posts" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link <?= $page == 'post-add.php' ? 'active':''?> " href="post-add.php">Agregar Posts</a>
-                        <a class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':''?>" href="post-view.php">Ver Post</a>
+                        <a class="nav-link <?= $page == 'post-add.php' ? 'active':''?> " href="post-add.php">Agregar pubicación</a>
+                        <a class="nav-link <?= $page == 'post-view.php' || $page == 'post-edit.php' ? 'active':''?>" href="post-view.php">Ver publicación</a>
                     </nav>
                 </div>
 
@@ -84,7 +84,7 @@
 
                 <a class="nav-link collapsed <?= $page == 'artwork-add.php' || $page == 'artwork-view.php' || $page == 'artwork-edit.php' ? 'active':''?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseArt" aria-expanded="false" aria-controls="collapseArt">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                    Arte
+                    Imagenes
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse <?= $page == 'artwork-add.php' || $page == 'artwork-view.php' || $page == 'artwork-edit.php' ? 'show':''?>" id="collapseArt" aria-labelledby="Art" data-bs-parent="#sidenavAccordion">
@@ -111,7 +111,7 @@
                 <?php if($_SESSION['auth_role'] == '2'): ?>
                 <a class="nav-link collapsed  <?=$page == 'send-email.php' || $page == 'view-email.php' || $page == 'about-email.php' ? 'show':''?> " href="#" data-bs-toggle="collapse" data-bs-target="#collapseEmail" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Email
+                        Correo
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse <?= $page == 'send-email.php' || $page == 'view-email.php' || $page == 'about-email.php' ? 'show':''?>" id="collapseEmail" aria-labelledby="Email" data-bs-parent="#sidenavAccordion">
